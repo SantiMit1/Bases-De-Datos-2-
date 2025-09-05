@@ -24,7 +24,6 @@ int main(void)
     return EXIT_FAILURE;
   }
 
-  / Opcional : setear timeout, charset, etc./ mysql_options(conn, MYSQL_SET_CHARSET_NAME, "utf8mb4");
 
   if (mysql_real_connect(conn, DB_HOST, DB_USER, DB_PASSWORD,
                          DB_NAME, DB_PORT, NULL, 0) == NULL)
