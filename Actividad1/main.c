@@ -11,8 +11,8 @@
 
 int main(void)
 {
-  MYSQLconn = NULL;
-  MYSQL_RES res = NULL;
+  MYSQL *conn = NULL;
+  MYSQL_RES *res = NULL;
   MYSQL_ROW row;
 
   printf("Iniciando conexión a MySQL...\n");
@@ -21,16 +21,14 @@ int main(void)
   if (conn == NULL)
   {
     fprintf(stderr, "mysql_init() falló (memoria insuficiente)\n");
-    return EXIT_FAILURE;
+    return;
   }
 
-
-  if (mysql_real_connect(conn, DB_HOST, DB_USER, DB_PASSWORD,
-                         DB_NAME, DB_PORT, NULL, 0) == NULL)
+  if (mysql_real_connect(conn, DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, DB_PORT, NULL, 0) == NULL)
   {
     fprintf(stderr, "No se pudo conectar: %s\n", mysql_error(conn));
     mysql_close(conn);
-    return EXIT_FAILURE;
+    return;
   }
 
   printf("¡Conexión exitosa!\n");
@@ -43,7 +41,7 @@ int main(void)
   {
     fprintf(stderr, "EL LLAMADO FALLO %s", mysql_error(conn));
     mysql_close(conn);
-    exit(EXIT_FAILURE);
+    return;
   }
 
   res = mysql_store_result(conn);
@@ -61,8 +59,11 @@ int main(void)
     }
   }
 
-  mysql_free_result(res);
+  if (res != NULL)
+  {
+    mysql_free_result(res);
+  }
   mysql_close(conn);
   printf("Conexión cerrada.\n");
-  return EXIT_SUCCESS;
+  return 0;
 }
