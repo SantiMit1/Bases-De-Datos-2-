@@ -5,11 +5,15 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/ormPrueba11</property>
+        <property name="hibernate.connection.url">jdbc:mysql://10.101.0.12:3306/ormPrueba11</property>
         <property name="hibernate.connection.username">user11</property>
         <property name="hibernate.connection.password">user11</property>
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
         <property name="hibernate.hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
+
+        <mapping class="org.bdd.orm.tablas.Profesor"></mapping>
+        <mapping class="org.bdd.orm.tablas.Estudiante"></mapping>
+        <mapping class="org.bdd.orm.tablas.Materia"></mapping>
     </session-factory>
 </hibernate-configuration>
