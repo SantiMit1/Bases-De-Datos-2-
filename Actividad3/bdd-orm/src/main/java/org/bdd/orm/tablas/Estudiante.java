@@ -22,6 +22,13 @@ public class Estudiante {
     )
     private List<Materia> materias;
 
+    public Estudiante() {
+    }
+
+    public Estudiante(String nombre) {
+        this.nombre = nombre;
+    }
+
     public int getId_estudiante() {
         return id_estudiante;
     }

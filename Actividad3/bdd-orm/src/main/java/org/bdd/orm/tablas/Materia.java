@@ -21,6 +21,13 @@ public class Materia {
     @ManyToMany(mappedBy = "materias")
     private List<Estudiante> estudiantes;
 
+    public Materia() {
+    }
+
+    public Materia(String nombre) {
+        this.nombre = nombre;
+    }
+
     public int getId_materia() {
         return id_materia;
     }

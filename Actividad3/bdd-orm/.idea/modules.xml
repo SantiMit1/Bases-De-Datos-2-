@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/bdd-orm.iml" filepath="$PROJECT_DIR$/bdd-orm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/bdd-orm.iml" filepath="$PROJECT_DIR$/.idea/bdd-orm.iml" />
     </modules>
   </component>
 </project>
