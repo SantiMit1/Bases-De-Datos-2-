@@ -1,0 +1,5 @@
+org\bdd\orm\tablas\Materia.class
+org\bdd\orm\util\HibernateUtil.class
+org\bdd\orm\Main.class
+org\bdd\orm\tablas\Profesor.class
+org\bdd\orm\tablas\Estudiante.class

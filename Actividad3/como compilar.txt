@@ -1,0 +1,7 @@
+Para compilar el proyecto es necesario tener instalado maven y java 21
+
+Dentro de la carpeta bdd-orm los siguientes comandos:
+
+-instalar dependencias: mvn clean install
+-compilar proyecto: mvn clean compile
+-ejecutar proyecto: mvn exec:java -Dexec.mainClass="org.bdd.orm.Main"
