@@ -1,0 +1,13 @@
+{
+  "name": "crud-mongodb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "mongoose": "^7.5.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
